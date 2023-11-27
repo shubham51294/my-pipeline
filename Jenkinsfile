@@ -1,12 +1,12 @@
 pipeline {
    agent {
       label {
-         label "built-in"
-         customWorkspace "/mnt/velocity"
+         label "qa"
+         customWorkspace "/mnt/velocity3"
       }
    }
   stages {
-     stage ("on-master") {
+     stage ("slave-2") {
         steps {
             sh "rm -rf *"
             sh "yum install git -y"
