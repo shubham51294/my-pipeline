@@ -10,6 +10,7 @@ pipeline {
         steps {
             sh "rm -rf *"
             sh "yum install git -y"
+            sh "git clone https://github.com/shubham51294/my-pipeline.git -b 2023Q1"
             sh "yum install httpd -y"
             sh "systemctl start httpd"
             sh "cp -r index.html /var/www/html"
